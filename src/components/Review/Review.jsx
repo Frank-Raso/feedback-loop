@@ -5,6 +5,7 @@ function Review() {
     <div>
       <h1>Review</h1>
 
+      <button><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button>
     </div>
   );
 }
