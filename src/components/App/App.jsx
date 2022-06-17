@@ -1,6 +1,8 @@
 import React from 'react';
+import {useState} from 'react'
 import axios from 'axios';
 import './App.css';
+import {useSelector} from 'react-redux'
 import { Route, HashRouter } from 'react-router-dom';
 import Home from '../Home/Home';
 import Feeling from '../Feeling/Feeling';
@@ -12,11 +14,13 @@ import Success from '../Success/Success';
 
 
 function App() {
+  const feelBack = useSelector (store=> store.feedbackReducer)
 
   return (
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
+        <h1>Your Feedback:{feelBack}</h1>
 
       </header>
 
