@@ -19,16 +19,11 @@ function App() {
   const supp = useSelector (store=> store.supportReducer)
   const comm = useSelector (store=> store.comReducer)
 
-
   return (
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-        <p>{feel}</p>
-        <p>{under}</p>
-        <p>{supp}</p>
-        <p>{comm}</p>
-
+      
       </header>
 
       <HashRouter>

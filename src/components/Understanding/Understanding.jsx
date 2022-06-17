@@ -10,16 +10,16 @@ function Understanding() {
 
 
 
-const[feedback, setFeed] = useState('');
+const[underFeed, setUnderFeed] = useState('');
 const dispatch = useDispatch();
 
   const UnderstandingIn = ()=>{
     console.log('in UnderstandingIn:')
-    setFeed(event.target.value)
+    setUnderFeed(event.target.value)
   }
 
   const setUnderstanding = ()=>{
-    dispatch({type:'SET_UNDER', payload:feedback})
+    dispatch({type:'SET_UNDER', payload:underFeed})
   }
 
 
