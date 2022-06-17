@@ -15,7 +15,7 @@ const dispatch = useDispatch();
   }
 
   const setFeeling = ()=>{
-    dispatch({type:'SET_FEED', payload:feedback})
+    dispatch({type:'SET_FEEL', payload:feedback})
   }
 
 
@@ -24,8 +24,8 @@ const dispatch = useDispatch();
 
   return (
     <div>
-      <h1>Feeling</h1>
-      <h1>{feedback}</h1>
+      <h1>How are you feeling today?</h1>
+
       <input placeholder="Feeling" type="text" onChange={FeelingIn} />
       <button onClick={setFeeling} ><a href='/#/Understanding'>Submit</a></button>
     </div>

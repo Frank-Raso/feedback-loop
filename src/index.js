@@ -7,9 +7,30 @@ import{ createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
 
-const feedbackReducer = ( state='', action ) =>{
-    console.log( 'in feedbackReducer:', action );
-    if( action.type === 'SET_FEED' ){
+const feelReducer = ( state='', action ) =>{
+    console.log( 'in feelReducer:', action );
+    if( action.type === 'SET_FEEL' ){
+        state = action.payload;
+    }
+    return state;
+}
+const understandReducer = ( state='', action ) =>{
+    console.log( 'in understandReducer:', action );
+    if( action.type === 'SET_UNDER' ){
+        state = action.payload;
+    }
+    return state;
+}
+const supportReducer = ( state='', action ) =>{
+    console.log( 'in supportReducer:', action );
+    if( action.type === 'SET_SUPPORT' ){
+        state = action.payload;
+    }
+    return state;
+}
+const comReducer = ( state='', action ) =>{
+    console.log( 'in comReducer:', action );
+    if( action.type === 'SET_COM' ){
         state = action.payload;
     }
     return state;
@@ -18,7 +39,11 @@ const feedbackReducer = ( state='', action ) =>{
 const store = createStore(
     combineReducers(
         {
-            feedbackReducer
+            feelReducer,
+            understandReducer,
+            supportReducer,
+            comReducer,
+
         }
     ) // end combine
 ) // end store
