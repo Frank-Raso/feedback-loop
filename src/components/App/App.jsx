@@ -1,8 +1,8 @@
 import React from 'react';
-import {useState} from 'react'
+import { useState } from 'react'
 import axios from 'axios';
 import './App.css';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Route, HashRouter } from 'react-router-dom';
 import Home from '../Home/Home';
 import Feeling from '../Feeling/Feeling';
@@ -14,16 +14,16 @@ import Success from '../Success/Success';
 
 
 function App() {
-  const feel = useSelector (store=> store.feelReducer)
-  const under = useSelector (store=> store.understandReducer)
-  const supp = useSelector (store=> store.supportReducer)
-  const comm = useSelector (store=> store.comReducer)
+  const feel = useSelector(store => store.feelReducer)
+  const under = useSelector(store => store.understandReducer)
+  const supp = useSelector(store => store.supportReducer)
+  const comm = useSelector(store => store.comReducer)
 
   return (
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-      
+
       </header>
 
       <HashRouter>

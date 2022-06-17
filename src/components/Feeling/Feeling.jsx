@@ -1,23 +1,23 @@
 import React from 'react';
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
 
 
 
 function Feeling() {
 
-const[feelFeed, setFeelFeed] = useState('');
-const dispatch = useDispatch();
-const history = useHistory();
+  const [feelFeed, setFeelFeed] = useState('');
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-  const FeelingIn = ()=>{
+  const FeelingIn = () => {
     console.log('in FeelingIn:')
     setFeelFeed(event.target.value)
   }
 
-  const setFeeling = ()=>{
-    dispatch({type:'SET_FEEL', payload:feelFeed})
+  const setFeeling = () => {
+    dispatch({ type: 'SET_FEEL', payload: feelFeed })
     // history.push('/#/Understanding')
   }
 

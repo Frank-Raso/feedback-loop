@@ -1,6 +1,6 @@
 import React from 'react';
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 
 
@@ -8,16 +8,16 @@ import {useDispatch} from 'react-redux'
 function comments() {
 
 
-  const[comFeed, setComFeed] = useState('');
+  const [comFeed, setComFeed] = useState('');
   const dispatch = useDispatch();
 
-  const comIn = ()=>{
+  const comIn = () => {
     console.log('in comIn:')
     setComFeed(event.target.value)
   }
 
-  const setCom = ()=>{
-    dispatch({type:'SET_COM', payload:comFeed})
+  const setCom = () => {
+    dispatch({ type: 'SET_COM', payload: comFeed })
   }
 
 

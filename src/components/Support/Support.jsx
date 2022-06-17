@@ -1,6 +1,6 @@
 import React from 'react';
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 
 
@@ -8,16 +8,16 @@ import {useDispatch} from 'react-redux'
 
 function Support() {
 
-  const[supportFeed, setSupportFeed] = useState('');
+  const [supportFeed, setSupportFeed] = useState('');
   const dispatch = useDispatch();
 
-  const SupportIn = ()=>{
+  const SupportIn = () => {
     console.log('in SupportIn:')
     setSupportFeed(event.target.value)
   }
 
-  const setSupport = ()=>{
-    dispatch({type:'SET_SUPPORT', payload:supportFeed})
+  const setSupport = () => {
+    dispatch({ type: 'SET_SUPPORT', payload: supportFeed })
   }
 
 
