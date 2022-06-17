@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Review() {
+function Home() {
   return (
     <div>
-      <h1>Review</h1>
+      <h1>Home</h1>
 
     </div>
   );
 }
 
-export default Review;
+export default Home;
