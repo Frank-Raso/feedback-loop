@@ -5,7 +5,7 @@ function Understanding() {
     <div>
       <h1>Understanding</h1>
       <input placeholder="Understanding" type="text" />
-      <button><a href='/#/Support'>Feedback</a></button>
+      <button><a href='/#/Support'>Submit</a></button>
 
     </div>
   );
