@@ -11,25 +11,25 @@ function Review() {
   const supp = useSelector(store => store.supportReducer)
   const com = useSelector(store => store.comReducer)
 
-  
-    const gamma = () => {
-      console.log('in gamma')
-      let feedbackPost = {
-        feeling: feel,
-        understanding: under,
-        support: supp,
-        comments:com,
-      };
-      axios.post('/feedback', feedbackPost).then((response) => {
-        console.log(response.data);
-      }).catch((err) => {
-        console.log(err);
-        alert('err posting fbp');
-      })
-     
+
+  const gamma = () => {
+    console.log('in gamma')
+    let feedbackPost = {
+      feeling: feel,
+      understanding: under,
+      support: supp,
+      comments: com,
+    };
+    axios.post('/feedback', feedbackPost).then((response) => {
+      console.log(response.data);
+    }).catch((err) => {
+      console.log(err);
+      alert('err posting fbp');
+    })
 
 
-    }
+
+  }
   return (
     <div>
       <h1>Review your feedback</h1>
