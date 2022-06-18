@@ -15,7 +15,7 @@ function Review() {
   const history = useHistory();
 
 
-  const SharksWithFrickenLazerBeamsAttatchedToTheirHeads = () => {
+  const gamma = () => {
     console.log('in gamma')
     let feedbackPost = {
       feeling: feel,
@@ -47,7 +47,7 @@ function Review() {
       <p>Comments: {com}</p>
 
 
-      <button onClick={SharksWithFrickenLazerBeamsAttatchedToTheirHeads}>Thanks for leaving feedback. Click here to submit</button>
+      <button onClick={gamma}>Thanks for leaving feedback. Click here to submit</button>
       {/* <button onClick={gamma} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button> */}
     </div>
   );
