@@ -30,7 +30,6 @@ function Feeling() {
   }
 
 
-
   return (
     <div>
       <h1>How are you feeling today?</h1>

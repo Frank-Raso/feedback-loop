@@ -10,7 +10,6 @@ function Understanding() {
 
 
 
-
   const [underFeed, setUnderFeed] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();

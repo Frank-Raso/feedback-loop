@@ -8,7 +8,6 @@ import { useHistory } from 'react-router-dom';
 
 function comments() {
 
-
   const [comFeed, setComFeed] = useState('');
   const dispatch = useDispatch();
   const history = useHistory();

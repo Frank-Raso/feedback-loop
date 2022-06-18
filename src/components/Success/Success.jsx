@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 function Success() {
     const history = useHistory();
 
-
     return (
         <div>
             <h1>Success! Your feedback has been submitted.</h1>

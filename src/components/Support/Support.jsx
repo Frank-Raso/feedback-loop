@@ -32,7 +32,6 @@ function Support() {
     history.push('/Understanding')
   }
 
-
   return (
     <div>
       <h1>How well are you being supported?</h1>

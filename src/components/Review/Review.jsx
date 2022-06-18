@@ -14,7 +14,6 @@ function Review() {
   const com = useSelector(store => store.comReducer)
   const history = useHistory();
 
-
   const gamma = () => {
     console.log('in gamma')
     let feedbackPost = {

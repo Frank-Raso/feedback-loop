@@ -23,7 +23,6 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
-
       </header>
 
       <HashRouter>
