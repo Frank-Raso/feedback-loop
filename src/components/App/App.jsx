@@ -11,7 +11,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
 import Success from '../Success/Success';
-
+import Admin from '../Admin/Admin';
 
 function App() {
   const feel = useSelector(store => store.feelReducer)
@@ -55,6 +55,9 @@ function App() {
           <Success />
         </Route>
 
+        <Route path='/Admin'>
+          <Admin />
+        </Route>
       </HashRouter>
 
     </div>

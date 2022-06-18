@@ -17,20 +17,26 @@ function Feeling() {
   }
 
   const setFeeling = () => {
-    dispatch({ type: 'SET_FEEL', payload: feelFeed })
-    history.push('/Understanding')
+    if (feelFeed == '') {
+      alert('Please add feedback before continuing')
+    }
+    else {
+      dispatch({ type: 'SET_FEEL', payload: feelFeed })
+      history.push('/Understanding')
+    }
   }
-
-
+  const Back =()=>{
+    history.push('/')
+  }
 
 
 
   return (
     <div>
       <h1>How are you feeling today?</h1>
-
-      <input placeholder="Feeling" type="text" onChange={FeelingIn} />
-      <button onClick={setFeeling}>Submit</button>
+      <button onClick={Back}>Back</button>
+      <input placeholder="Feeling" type="number" onChange={FeelingIn} />
+      <button onClick={setFeeling}>Next</button>
       {/* <button onClick={setFeeling} ><a href='/#/Understanding'>Submit</a></button> */}
     </div>
   );

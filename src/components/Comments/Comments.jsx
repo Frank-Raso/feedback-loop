@@ -23,15 +23,19 @@ function comments() {
     history.push('/Review')
 
   }
-
-
+  
+  const Back =()=>{
+    history.push('/Support')
+  }
 
 
   return (
     <div>
       <h1>Any comments you want to leave?</h1>
+      <button onClick={Back}>Back</button>
+
       <input placeholder="Comments" type="text" onChange={comIn} />
-      <button onClick={setCom} >Submit</button>
+      <button onClick={setCom} >Next</button>
       {/* <button onClick={setCom} ><a href='/#/Review'>Submit</a></button> */}
     </div>
   );

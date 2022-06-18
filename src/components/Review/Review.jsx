@@ -15,7 +15,7 @@ function Review() {
   const history = useHistory();
 
 
-  const gamma = () => {
+  const SharksWithFrickenLazerBeamsAttatchedToTheirHeads = () => {
     console.log('in gamma')
     let feedbackPost = {
       feeling: feel,
@@ -32,11 +32,14 @@ function Review() {
       alert('err posting fbp');
     })
 
-
+    const Back =()=>{
+      history.push('/Comments')
+    }
 
   }
   return (
     <div>
+
       <h1>Review your feedback</h1>
       <p>Feeling: {feel}</p>
       <p>Understanding: {under}</p>
@@ -44,8 +47,7 @@ function Review() {
       <p>Comments: {com}</p>
 
 
-
-      <button onClick={gamma}>Thanks for leaving feedback click here to submit</button>
+      <button onClick={SharksWithFrickenLazerBeamsAttatchedToTheirHeads}>Thanks for leaving feedback. Click here to submit</button>
       {/* <button onClick={gamma} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button> */}
     </div>
   );

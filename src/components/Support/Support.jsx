@@ -19,19 +19,27 @@ function Support() {
   }
 
   const setSupport = () => {
+    if (supportFeed == '') {
+      alert('Please add feedback before continuing')
+    }
+    else {
     dispatch({ type: 'SET_SUPPORT', payload: supportFeed })
     history.push('/Comments')
-
+    }
   }
 
-
+  const Back =()=>{
+    history.push('/Understanding')
+  }
 
 
   return (
     <div>
       <h1>How well are you being supported?</h1>
-      <input placeholder="Support" type="text" onChange={SupportIn} />
-      <button onClick={setSupport}>Submit</button>
+      <button onClick={Back}>Back</button>
+
+      <input placeholder="Support" type="number" onChange={SupportIn} />
+      <button onClick={setSupport}>Next</button>
       {/* <button onClick={setSupport} ><a href='/#/Comments'>Submit</a></button> */}
 
     </div>
