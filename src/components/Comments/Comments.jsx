@@ -23,8 +23,8 @@ function comments() {
     history.push('/Review')
 
   }
-  
-  const Back =()=>{
+
+  const Back = () => {
     history.push('/Support')
   }
 

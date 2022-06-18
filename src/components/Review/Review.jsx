@@ -32,7 +32,7 @@ function Review() {
       alert('err posting fbp');
     })
 
-    const Back =()=>{
+    const Back = () => {
       history.push('/Comments')
     }
 

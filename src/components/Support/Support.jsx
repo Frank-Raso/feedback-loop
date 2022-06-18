@@ -23,12 +23,12 @@ function Support() {
       alert('Please add feedback before continuing')
     }
     else {
-    dispatch({ type: 'SET_SUPPORT', payload: supportFeed })
-    history.push('/Comments')
+      dispatch({ type: 'SET_SUPPORT', payload: supportFeed })
+      history.push('/Comments')
     }
   }
 
-  const Back =()=>{
+  const Back = () => {
     history.push('/Understanding')
   }
 

@@ -25,7 +25,7 @@ function Feeling() {
       history.push('/Understanding')
     }
   }
-  const Back =()=>{
+  const Back = () => {
     history.push('/')
   }
 

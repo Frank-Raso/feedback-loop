@@ -25,13 +25,13 @@ function Understanding() {
       alert('Please add feedback before continuing')
     }
     else {
-    dispatch({ type: 'SET_UNDER', payload: underFeed })
-    history.push('/Support')
+      dispatch({ type: 'SET_UNDER', payload: underFeed })
+      history.push('/Support')
 
-  }
+    }
   }
 
-  const Back =()=>{
+  const Back = () => {
     history.push('/Feeling')
   }
 
