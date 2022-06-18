@@ -18,7 +18,7 @@ function Feeling() {
 
   const setFeeling = () => {
     dispatch({ type: 'SET_FEEL', payload: feelFeed })
-    // history.push('/#/Understanding')
+    history.push('/Understanding')
   }
 
 
@@ -30,10 +30,9 @@ function Feeling() {
       <h1>How are you feeling today?</h1>
 
       <input placeholder="Feeling" type="text" onChange={FeelingIn} />
-      <button onClick={setFeeling}><a href='/#/Understanding'>Submit</a></button>
-
+      <button onClick={setFeeling}>Submit</button>
+      {/* <button onClick={setFeeling} ><a href='/#/Understanding'>Submit</a></button> */}
     </div>
   );
 }
-<a href='/#/Understanding'></a>
 export default Feeling;

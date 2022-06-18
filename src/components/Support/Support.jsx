@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -10,6 +11,7 @@ function Support() {
 
   const [supportFeed, setSupportFeed] = useState('');
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const SupportIn = () => {
     console.log('in SupportIn:')
@@ -18,6 +20,8 @@ function Support() {
 
   const setSupport = () => {
     dispatch({ type: 'SET_SUPPORT', payload: supportFeed })
+    history.push('/Comments')
+
   }
 
 
@@ -27,7 +31,9 @@ function Support() {
     <div>
       <h1>How well are you being supported?</h1>
       <input placeholder="Support" type="text" onChange={SupportIn} />
-      <button onClick={setSupport}><a href='/#/Comments'>Submit</a></button>
+      <button onClick={setSupport}>Submit</button>
+      {/* <button onClick={setSupport} ><a href='/#/Comments'>Submit</a></button> */}
+
     </div>
   );
 }

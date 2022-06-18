@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -10,6 +11,7 @@ function comments() {
 
   const [comFeed, setComFeed] = useState('');
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const comIn = () => {
     console.log('in comIn:')
@@ -18,6 +20,8 @@ function comments() {
 
   const setCom = () => {
     dispatch({ type: 'SET_COM', payload: comFeed })
+    history.push('/Review')
+
   }
 
 
@@ -27,7 +31,8 @@ function comments() {
     <div>
       <h1>Any comments you want to leave?</h1>
       <input placeholder="Comments" type="text" onChange={comIn} />
-      <button onClick={setCom} ><a href='/#/Review'>Submit</a></button>
+      <button onClick={setCom} >Submit</button>
+      {/* <button onClick={setCom} ><a href='/#/Review'>Submit</a></button> */}
     </div>
   );
 }

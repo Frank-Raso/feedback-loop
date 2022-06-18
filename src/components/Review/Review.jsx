@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
 
 
@@ -10,6 +12,7 @@ function Review() {
   const under = useSelector(store => store.understandReducer)
   const supp = useSelector(store => store.supportReducer)
   const com = useSelector(store => store.comReducer)
+  const history = useHistory();
 
 
   const gamma = () => {
@@ -22,6 +25,8 @@ function Review() {
     };
     axios.post('/feedback', feedbackPost).then((response) => {
       console.log(response.data);
+      history.push('/Success')
+
     }).catch((err) => {
       console.log(err);
       alert('err posting fbp');
@@ -40,7 +45,8 @@ function Review() {
 
 
 
-      <button onClick={gamma} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button>
+      <button onClick={gamma}>Thanks for leaving feedback click here to submit</button>
+      {/* <button onClick={gamma} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button> */}
     </div>
   );
 }
