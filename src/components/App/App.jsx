@@ -20,41 +20,41 @@ function App() {
   const comm = useSelector(store => store.comReducer)
 
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Feedback!</h1>
       </header>
 
       <HashRouter>
-        <Route path='/' exact>
+        <Route path="/" exact>
           <Home />
         </Route>
 
-        <Route path='/Feeling'>
+        <Route path="/Feeling">
           <Feeling />
         </Route>
 
-        <Route path='/Understanding'>
+        <Route path="/Understanding">
           <Understanding />
         </Route>
 
-        <Route path='/Support'>
+        <Route path="/Support">
           <Support />
         </Route>
 
-        <Route path='/Comments'>
+        <Route path="/Comments">
           <Comments />
         </Route>
 
-        <Route path='/Review'>
+        <Route path="/Review">
           <Review />
         </Route>
 
-        <Route path='/Success'>
+        <Route path="/Success">
           <Success />
         </Route>
 
-        <Route path='/Admin'>
+        <Route path="/Admin">
           <Admin />
         </Route>
       </HashRouter>

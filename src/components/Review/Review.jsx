@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom';
-
 import axios from 'axios';
 
 
@@ -14,8 +13,14 @@ function Review() {
   const com = useSelector(store => store.comReducer)
   const history = useHistory();
 
-  const gamma = () => {
-    console.log('in gamma')
+  const startOver = () => {
+    history.push('/Feeling')
+
+  }
+
+  const Submit = () => {
+    console.log('in Submit')
+
     let feedbackPost = {
       feeling: feel,
       understanding: under,
@@ -31,10 +36,6 @@ function Review() {
       alert('err posting fbp');
     })
 
-    const Back = () => {
-      history.push('/Comments')
-    }
-
   }
   return (
     <div>
@@ -45,9 +46,11 @@ function Review() {
       <p>Support: {supp}</p>
       <p>Comments: {com}</p>
 
+      {/* <button><a href='/' exact>Want to start over? Click here.</a></button> */}
+      <button onClick={Submit}>Thanks for the feedback. Click here to submit</button>
 
-      <button onClick={gamma}>Thanks for leaving feedback. Click here to submit</button>
-      {/* <button onClick={gamma} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button> */}
+      <button onClick={startOver} >Want to go back? Click here.</button>
+      {/* <button onClick={Submit} ><a href='/#/Success'>Thanks for leaving feedback click here to submit</a></button> */}
     </div>
   );
 }
