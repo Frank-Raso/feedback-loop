@@ -11,7 +11,7 @@ const feelReducer = (state = '', action) => {
     console.log('in feelReducer:', action);
     if (action.type === 'SET_FEEL') {
         state = action.payload;
-    }if (action.type === 'RESET') {
+    } if (action.type === 'RESET') {
         state = action.payload
     }
     return state;
@@ -20,7 +20,7 @@ const understandReducer = (state = '', action) => {
     console.log('in understandReducer:', action);
     if (action.type === 'SET_UNDER') {
         state = action.payload;
-    }if (action.type === 'RESET') {
+    } if (action.type === 'RESET') {
         state = action.payload
     }
     return state;
@@ -29,7 +29,7 @@ const supportReducer = (state = '', action) => {
     console.log('in supportReducer:', action);
     if (action.type === 'SET_SUPPORT') {
         state = action.payload;
-    }if (action.type === 'RESET') {
+    } if (action.type === 'RESET') {
         state = action.payload
     }
     return state;
@@ -38,7 +38,7 @@ const comReducer = (state = '', action) => {
     console.log('in comReducer:', action);
     if (action.type === 'SET_COM') {
         state = action.payload;
-    }if (action.type === 'RESET') {
+    } if (action.type === 'RESET') {
         state = action.payload
     }
     return state;

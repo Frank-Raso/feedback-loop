@@ -14,15 +14,11 @@ import Success from '../Success/Success';
 import Admin from '../Admin/Admin';
 
 function App() {
-  const feel = useSelector(store => store.feelReducer)
-  const under = useSelector(store => store.understandReducer)
-  const supp = useSelector(store => store.supportReducer)
-  const comm = useSelector(store => store.comReducer)
-
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Feedback!</h1>
+
       </header>
 
       <HashRouter>
