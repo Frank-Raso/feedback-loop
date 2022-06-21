@@ -22,7 +22,9 @@ function Success() {
             {/* This way will reset the values and use the history.push("/") but keeps the users log history in the console, 
             I did not think thats what the assignment called for so i added an <a href> tag 
             that would redirect and refresh the page. The RESET dispatch seems redundant when combined with 
-            the <a href> tag as both would clear the values. But as I was unclear of the specific instructions, did both.   */}
+            the <a href> tag as both would clear the values. But as I was unclear of the specific instructions, did both.  If console
+            info does not matter then I would trash the <a href='/'> tag and uncomment the history.push("/") */}
+            
             {/* <button onClick={RESET} >Leave additional feedback</button>  */}
 
             <button onClick={RESET}><a href='/'> Leave additional Feedback</a></button>
